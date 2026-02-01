@@ -4,38 +4,41 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>ScopicLink — Influencer Marketing Agency</title>
-  <meta name="description" content="ScopicLink is a full-service influencer marketing agency that connects brands with creators to drive awareness, engagement and conversions." />
-  <meta name="theme-color" content="#6366f1" />
+  <meta name="description" content="ScopicLink connects brands and creators with data-driven influencer marketing, campaign management, and performance reporting." />
+  <link rel="canonical" href="https://scopiclink.github.io/scopiclink.shop/" />
 
   <!-- Open Graph / Twitter -->
   <meta property="og:title" content="ScopicLink — Influencer Marketing Agency" />
-  <meta property="og:description" content="Full-service influencer marketing for brands and creators. Data-driven discovery, campaign management, and performance tracking." />
+  <meta property="og:description" content="Data-driven influencer discovery, campaign strategy, and performance tracking for brands." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://scopiclink.shop/" />
-  <meta property="og:image" content="https://scopiclink.shop/assets/og-image.png" />
-
+  <meta property="og:url" content="https://scopiclink.github.io/scopiclink.shop/" />
+  <meta property="og:image" content="assets/og-image.svg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="@scopiclink" />
+  <meta name="theme-color" content="#6366f1" />
 
-  <!-- Favicon & touch icons -->
-  <link rel="icon" href="/assets/favicon.ico" />
-  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <!-- Favicon & touch icons (place files in assets/) -->
+  <link rel="icon" href="assets/favicon.ico" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
 
-  <!-- Fonts & Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="" crossorigin="anonymous">
+  <!-- Preconnect for fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="/styles.css">
+  <!-- Icon set (optional); replace with inline SVGs if you prefer to avoid external fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" />
 
-  <!-- Structured data -->
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Structured data (Organization) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "ScopicLink",
-    "url": "https://scopiclink.shop/",
-    "logo": "https://scopiclink.shop/assets/logo.png",
+    "url": "https://scopiclink.github.io/scopiclink.shop/",
+    "logo": "assets/logo-inline.svg",
     "sameAs": [
       "https://www.instagram.com/scopiclink",
       "https://x.com/scopiclink",
@@ -43,29 +46,31 @@
     ],
     "contactPoint": [{
       "@type": "ContactPoint",
-      "contactType": "customer service",
-      "email": "scopiclink@gmail.com",
-      "url": "https://scopiclink.shop/#connect"
+      "contactType": "customer support",
+      "email": "scopiclink@gmail.com"
     }]
   }
   </script>
 </head>
 <body>
-
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header" role="banner">
-    <div class="container nav">
-      <a class="brand" href="/" aria-label="ScopicLink home">
-        <strong>Scopic<span class="accent">Link</span></strong>
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="ScopicLink Home">
+        <img src="assets/logo-inline.svg" alt="ScopicLink" class="brand-logo" />
+        <span class="brand-text">Scopic<span class="brand-accent">Link</span></span>
       </a>
 
-      <button id="navToggle" class="nav-toggle" aria-controls="primaryNav" aria-expanded="false" aria-label="Open menu">
-        <span class="hamburger"></span>
+      <button id="navToggle" class="nav-toggle" aria-controls="primaryNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="sr-only">Menu</span>
+        <svg class="icon icon-hamburger" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
       </button>
 
-      <nav id="primaryNav" class="primary-nav" role="navigation" aria-label="Primary">
-        <ul>
+      <nav id="primaryNav" class="primary-nav" role="navigation" aria-label="Primary navigation">
+        <ul class="nav-list">
           <li><a href="#services">Services</a></li>
           <li><a href="#creators">Creators</a></li>
           <li><a href="#brands">Brands</a></li>
@@ -75,64 +80,65 @@
     </div>
   </header>
 
-  <main id="main" class="main">
+  <main id="main">
     <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-copy">
-          <h1>Connect. Influence. <span class="accent">Succeed.</span></h1>
-          <p class="lead">ScopicLink is a full-service influencer marketing agency helping brands scale through trusted creators, strategic campaigns, and performance-driven execution.</p>
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1 class="hero-title">Connect. Influence. <span class="accent">Succeed.</span></h1>
+          <p class="hero-lead">ScopicLink is a full-service influencer marketing agency helping brands scale through trusted creators, strategic campaigns, and performance-driven execution.</p>
           <div class="hero-ctas">
-            <a href="#creators" class="btn btn-primary">I'm a Creator</a>
-            <a href="#brands" class="btn btn-outline">I'm a Brand</a>
+            <a class="btn btn-primary" href="#creators">I'm a Creator</a>
+            <a class="btn btn-outline" href="#brands">I'm a Brand</a>
           </div>
         </div>
         <div class="hero-media" aria-hidden="true">
-          <!-- Placeholder for hero image or illustration -->
-          <img src="/assets/hero-illustration.svg" alt="" loading="lazy">
+          <img src="assets/hero-illustration.svg" alt="" loading="lazy" width="560" height="360"/>
         </div>
       </div>
     </section>
 
-    <section id="services" class="section">
+    <section id="services" class="section services">
       <div class="container">
-        <h2 class="section-title">Our Core Services</h2>
-        <p class="section-sub">End-to-end influencer marketing solutions designed for measurable growth.</p>
+        <header class="section-header">
+          <h2>Our Core Services</h2>
+          <p class="section-sub">End-to-end influencer marketing solutions designed for measurable growth.</p>
+        </header>
 
-        <ul class="services-grid" role="list">
-          <li class="service-card">
-            <i class="fas fa-search service-icon" aria-hidden="true"></i>
-            <h3>Influencer Discovery & Vetting</h3>
-            <p>Authentic creators selected using data-driven insights and manual review.</p>
+        <ul class="cards" role="list">
+          <li class="card">
+            <div class="icon"><i class="fas fa-search" aria-hidden="true"></i></div>
+            <h3>Influencer Discovery &amp; Vetting</h3>
+            <p>Authentic creators selected using data-driven insights and manual review processes.</p>
           </li>
 
-          <li class="service-card">
-            <i class="fas fa-chart-line service-icon" aria-hidden="true"></i>
-            <h3>Campaign Strategy & Management</h3>
-            <p>End-to-end campaign planning, execution, and optimization.</p>
+          <li class="card">
+            <div class="icon"><i class="fas fa-chart-line" aria-hidden="true"></i></div>
+            <h3>Campaign Strategy &amp; Management</h3>
+            <p>End-to-end planning, execution, and optimization for measurable outcomes.</p>
           </li>
 
-          <li class="service-card">
-            <i class="fas fa-file-contract service-icon" aria-hidden="true"></i>
-            <h3>Contracts & Payments</h3>
-            <p>Clear deliverables, fair compensation, and transparent payment workflows.</p>
+          <li class="card">
+            <div class="icon"><i class="fas fa-file-contract" aria-hidden="true"></i></div>
+            <h3>Contracts &amp; Payments</h3>
+            <p>Transparent contracts and timely payments with clear deliverables.</p>
           </li>
 
-          <li class="service-card">
-            <i class="fas fa-chart-pie service-icon" aria-hidden="true"></i>
+          <li class="card">
+            <div class="icon"><i class="fas fa-chart-pie" aria-hidden="true"></i></div>
             <h3>Performance Tracking</h3>
-            <p>ROI-focused reporting and actionable insights to scale what works.</p>
+            <p>ROI-driven reporting and recommendations to scale winning tactics.</p>
           </li>
 
-          <li class="service-card">
-            <i class="fas fa-shield-alt service-icon" aria-hidden="true"></i>
+          <li class="card">
+            <div class="icon"><i class="fas fa-shield-alt" aria-hidden="true"></i></div>
             <h3>Brand Safety</h3>
-            <p>Content oversight and compliance to protect brand reputation.</p>
+            <p>Content review and compliance checks to protect brand reputation.</p>
           </li>
 
-          <li class="service-card">
-            <i class="fas fa-handshake service-icon" aria-hidden="true"></i>
+          <li class="card">
+            <div class="icon"><i class="fas fa-handshake" aria-hidden="true"></i></div>
             <h3>Long-Term Partnerships</h3>
-            <p>Foster sustained creator-brand collaborations for enduring results.</p>
+            <p>Build sustainable creator-brand relationships that drive long-term value.</p>
           </li>
         </ul>
       </div>
@@ -140,56 +146,63 @@
 
     <section id="creators" class="section audience">
       <div class="container audience-inner">
-        <div>
+        <div class="audience-copy">
           <h2>For Creators</h2>
-          <p>Collaborate with premium brands while we manage negotiations, payments, and campaigns.</p>
-          <div class="contact-btns">
-            <a href="https://wa.me/916296699095" class="btn btn-whatsapp" aria-label="WhatsApp"> <i class="fab fa-whatsapp"></i> WhatsApp</a>
-            <a href="mailto:scopiclink@gmail.com" class="btn btn-email" aria-label="Email"> <i class="fas fa-envelope"></i> Email</a>
-            <a href="https://www.instagram.com/scopiclink" class="btn btn-ig" aria-label="Instagram"> <i class="fab fa-instagram"></i> Instagram</a>
+          <p>Collaborate with premium brands while we manage negotiations, payments, and campaign logistics.</p>
+          <div class="contact-actions">
+            <a class="btn btn-whatsapp" href="https://wa.me/916296699095" rel="noopener" target="_blank"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp</a>
+            <a class="btn btn-email" href="mailto:scopiclink@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i> Email</a>
+            <a class="btn btn-ig" href="https://www.instagram.com/scopiclink" rel="noopener" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i> Instagram</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="brands" class="section audience">
+    <section id="brands" class="section audience audience-alt">
       <div class="container audience-inner">
-        <div>
+        <div class="audience-copy">
           <h2>For Brands</h2>
-          <p>Scale awareness, engagement, and conversions through data-driven influencer campaigns.</p>
-          <div class="contact-btns">
-            <a href="https://wa.me/916296699095" class="btn btn-whatsapp"> <i class="fab fa-whatsapp"></i> WhatsApp</a>
-            <a href="mailto:scopiclink@gmail.com" class="btn btn-email"> <i class="fas fa-envelope"></i> Email</a>
-            <a href="https://www.instagram.com/scopiclink" class="btn btn-ig"> <i class="fab fa-instagram"></i> Instagram</a>
+          <p>Scale awareness, engagement, and conversions through tailored influencer campaigns.</p>
+          <div class="contact-actions">
+            <a class="btn btn-whatsapp" href="https://wa.me/916296699095" rel="noopener" target="_blank"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp</a>
+            <a class="btn btn-email" href="mailto:scopiclink@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i> Email</a>
+            <a class="btn btn-ig" href="https://www.instagram.com/scopiclink" rel="noopener" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i> Instagram</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="connect" class="section social">
+    <section id="connect" class="section connect">
       <div class="container">
-        <h2>Connect With ScopicLink</h2>
-        <div class="social-links" role="list">
-          <a href="https://www.instagram.com/scopiclink" aria-label="Instagram" class="social-link"><i class="fab fa-instagram"></i></a>
-          <a href="https://x.com/scopiclink" aria-label="X / Twitter" class="social-link"><i class="fab fa-x-twitter"></i></a>
-          <a href="https://www.linkedin.com/company/scopiclink/" aria-label="LinkedIn" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://wa.me/916296699095" aria-label="WhatsApp" class="social-link"><i class="fab fa-whatsapp"></i></a>
-        </div>
+        <header class="section-header">
+          <h2>Connect With ScopicLink</h2>
+        </header>
 
-        <div class="connect-form">
-          <!-- For GitHub Pages use a form provider (Formspree, Netlify, etc.). Replace action with your provider endpoint. -->
-          <form action="https://formspree.io/f/your-form-id" method="POST" class="form" aria-label="Contact form">
-            <label for="name">Name</label>
-            <input id="name" name="name" type="text" required>
+        <div class="connect-grid">
+          <div class="social-links" aria-hidden="false" role="list">
+            <a class="social" href="https://www.instagram.com/scopiclink" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a class="social" href="https://x.com/scopiclink" target="_blank" rel="noopener" aria-label="X / Twitter"><i class="fab fa-x-twitter" aria-hidden="true"></i></a>
+            <a class="social" href="https://www.linkedin.com/company/scopiclink/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+            <a class="social" href="https://wa.me/916296699095" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+          </div>
 
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" required>
+          <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST" novalidate aria-label="Contact form">
+            <!-- Replace action with your form endpoint. Keep honeypot field for spam protection. -->
+            <label for="cf-name">Name</label>
+            <input id="cf-name" name="name" type="text" inputmode="text" required />
 
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+            <label for="cf-email">Email</label>
+            <input id="cf-email" name="email" type="email" inputmode="email" required />
+
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" rows="5" required></textarea>
+
+            <!-- Honeypot (invisible to real users) -->
+            <label class="hidden" for="cf-website">Website</label>
+            <input id="cf-website" name="website" type="text" class="hidden" tabindex="-1" autocomplete="off" />
 
             <button class="btn btn-primary" type="submit">Send message</button>
-            <p class="form-note">Or email us directly at <a href="mailto:scopiclink@gmail.com">scopiclink@gmail.com</a></p>
+            <p class="form-hint">Or email us at <a href="mailto:scopiclink@gmail.com">scopiclink@gmail.com</a></p>
           </form>
         </div>
       </div>
@@ -197,13 +210,17 @@
   </main>
 
   <footer class="site-footer" role="contentinfo">
-    <div class="container">
-      <p>© 2026 ScopicLink · <a href="https://scopiclink.shop">scopiclink.shop</a> · All Rights Reserved</p>
+    <div class="container footer-inner">
+      <p>© 2026 ScopicLink · <a href="https://scopiclink.shop">scopiclink.shop</a> · All rights reserved</p>
     </div>
   </footer>
 
-  <a class="float-wa" href="https://wa.me/916296699095" aria-label="WhatsApp us"> <i class="fab fa-whatsapp"></i> WhatsApp</a>
+  <a class="float-wa" href="https://wa.me/916296699095" aria-label="WhatsApp us" target="_blank" rel="noopener"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp</a>
 
-  <script src="/script.js" defer></script>
+  <noscript>
+    <div class="noscript-notice">This site works better with JavaScript enabled — some features are disabled.</div>
+  </noscript>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
